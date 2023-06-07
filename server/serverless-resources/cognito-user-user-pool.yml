@@ -1,0 +1,19 @@
+Resources:
+  CognitoAdminUserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: ${self:provider.stage}-user-user-pool-client
+      UserPoolId:
+        Ref: CognitoAdminUserPool
+      ExplicitAuthFlows:
+        - ALLOW_USER_PASSWORD_AUTH
+        - ALLOW_REFRESH_TOKEN_AUTH
+      GenerateSecret: false
+      AuthSessionValidity: 15
+      AccessTokenValidity: 1
+      IdTokenValidity: 1
+      RefreshTokenValidity: 2
+      TokenValidityUnits:
+        AccessToken: days
+        IdToken: days
+        RefreshToken: days

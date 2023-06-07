@@ -1,0 +1,28 @@
+
+
+
+    .like_button {
+        @apply flex items-center p-2 gap-1 bg-gray-700 text-white rounded-lg opacity-80 transition-colors duration-150 ;
+        font-size: .85rem;
+        margin-top: 10px;
+
+        @media (hover: hover) {
+            @apply hover:opacity-100
+        }
+
+        @screen sm {
+            @apply text-sm
+        }
+
+        @screen md {
+            @apply p-2.5
+        }
+
+        >svg {
+            @apply text-sm;
+            
+            @screen sm {
+                @apply text-base;
+            }
+        }
+    }

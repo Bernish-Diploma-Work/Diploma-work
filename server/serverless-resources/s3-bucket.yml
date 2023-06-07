@@ -1,0 +1,23 @@
+Resources:
+  Static:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: '${self:custom.serviceName}-static'
+      PublicAccessBlockConfiguration:
+        BlockPublicPolicy: false
+        RestrictPublicBuckets: false
+
+
+  StaticBucketAllowPublicReadPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Static
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - "s3:GetObject"
+            Resource:
+              - !Join ['/', [!GetAtt [Static, Arn], '*']]
+            Principal: "*"

@@ -1,0 +1,24 @@
+service: bernish-diploma-back
+
+frameworkVersion: '3'
+
+useDotenv: true
+
+plugins:
+  - serverless-deployment-bucket
+
+provider:
+  name: aws
+  endpointType: REGIONAL
+  runtime: nodejs18.x
+  stage: dev
+  region: eu-central-1
+  deploymentBucket:
+    name: bernish-diploma-back-${self:provider.stage}-deploys
+    serverSideEncryption: AES256
+    blockPublicAccess: true
+
+resources: ${file(serverless-resources/_resources.yml)}
+
+custom:
+  serviceName: ${self:service}-${self:provider.stage}

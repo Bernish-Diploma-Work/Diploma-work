@@ -1,0 +1,28 @@
+
+.wrapper {
+    @apply inline-flex;
+
+    >button {
+        @apply ml-1 text-base;
+        @screen sm {
+            @apply text-2xl;
+        }
+        
+    }
+
+    .sidebar {
+        @apply absolute left-0 top-full  overflow-scroll animate-fadeIn duration-150 bg-gray-900 rounded-xl;
+        height: 100vh;
+        width: 70%;
+        z-index: 99;
+
+    }
+    .curtain {
+        @apply absolute left-0 top-0 animate-fadeIn duration-200;
+        z-index: 98;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.433);
+    }
+        
+}

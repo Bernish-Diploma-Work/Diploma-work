@@ -1,0 +1,22 @@
+.info_wrapper {
+    @apply flex items-center gap-4;
+
+    >div {
+        
+        >.name {
+            @apply text-white;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        >.subscribers_count {
+            @apply text-xs text-gray-500;
+        }
+
+        @screen md {
+            >.name {
+                @apply text-base;
+            }
+        }
+    }
+
+}

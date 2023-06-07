@@ -1,0 +1,8 @@
+.logo {
+    @apply font-semibold text-2xl;
+    color: white;
+
+    >:first-child {
+        @apply text-primary;
+    }
+}

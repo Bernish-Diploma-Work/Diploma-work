@@ -1,0 +1,11 @@
+.header {
+    @apply pt-2 pb-1 px-2 flex flex-wrap opacity-100 justify-between pointer-events-auto
+     border-b-stone-500 sticky top-0 left-0 transition-all duration-300;
+    z-index: 100;
+    background-color: #231f2c;
+    @screen md {
+        @apply pt-6 pb-3 px-6 relative;
+        
+    }
+}
+

@@ -1,0 +1,26 @@
+.button {
+    @apply flex items-center justify-center rounded-lg bg-primary text-white p-2 transition-colors opacity-80 duration-150;
+    font-size: .85rem;
+
+    @screen sm {
+        @apply text-sm;
+    }
+
+    @screen md {
+        @apply p-2.5
+    }
+
+    &.subscribed {
+        @apply bg-gray-500;
+    }
+    >svg {
+        @apply mr-2 text-sm;
+
+        @screen sm {
+            @apply text-base;
+        }
+    }
+    @media (hover: hover) {
+        @apply hover:opacity-100;
+    }
+}

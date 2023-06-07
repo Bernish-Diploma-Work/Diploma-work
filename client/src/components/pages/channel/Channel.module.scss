@@ -1,0 +1,16 @@
+
+.channel_wrapper {
+    @apply mb-10 mt-5 w-full;
+    
+    .channel_top {
+        @apply flex items-center flex-wrap gap-5;
+        @screen sm {
+            @apply gap-12
+        }
+
+    }
+
+    .channel_description {
+        @apply text-gray-500 mt-5;
+    }
+}

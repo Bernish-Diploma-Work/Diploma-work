@@ -1,0 +1,12 @@
+
+.shimmer_wrapper {
+    @apply h-full w-full relative;
+    transform: skewX(-20deg);
+
+    .shimmer {
+        @apply absolute top-0 left-0 h-full w-full animate-loading opacity-90;
+        animation-timing-function: cubic-bezier(.35,.36,.63,.64);        
+        background: linear-gradient(90deg, #35334060, #35334035);       
+    }
+
+}

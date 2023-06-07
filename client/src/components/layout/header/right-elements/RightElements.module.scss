@@ -1,0 +1,18 @@
+.elements {
+    @apply relative flex items-center;
+}
+
+.button {
+    @apply inline-flex mx-2 text-base ml-6 text-purple items-center justify-center opacity-60 transition-opacity ;
+
+    @media (hover: hover) {
+        @apply hover:opacity-100;
+    }
+
+    @screen sm {
+        @apply text-2xl;
+    }
+    @screen md {
+        @apply text-3xl;
+    }
+}

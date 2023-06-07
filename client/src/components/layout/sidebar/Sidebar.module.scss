@@ -1,0 +1,12 @@
+.sidebar {
+    @apply p-2 pl-3 mt-2;
+    width: 100%;
+
+    @screen md {
+        @apply p-5;
+        width: 23%;
+
+    }
+    
+
+}

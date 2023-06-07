@@ -1,0 +1,10 @@
+.avatar {
+    @apply rounded-full;
+    padding: .15rem;
+    
+
+
+    >div {
+        @apply rounded-full h-10 w-10 bg-gray-500 relative overflow-hidden;
+    }
+}

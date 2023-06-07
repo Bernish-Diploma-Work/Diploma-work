@@ -1,0 +1,14 @@
+
+
+.wrapper {
+    @apply flex justify-between items-center gap-1;
+
+    .progress {
+        @apply text-gray-500 text-sm flex items-center;
+
+        >svg {
+            @apply text-green-500 mx-2;
+            font-size: 1.2rem;
+        }
+    }
+}

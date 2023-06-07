@@ -1,0 +1,8 @@
+.container {
+    @apply w-full;
+    @screen md {
+        @apply w-10/12 flex justify-center; 
+
+    }
+
+}

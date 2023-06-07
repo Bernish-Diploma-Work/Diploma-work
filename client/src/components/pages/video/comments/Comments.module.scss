@@ -1,0 +1,97 @@
+
+.comments {
+    @apply rounded-xl p-5 relative bg-gray-900 shadow;
+
+    h2 {
+        @apply text-gray-500 flex items-center text-sm gap-2;
+        @screen sm {
+            @apply text-tiny;
+        }
+        
+    }
+
+    .line {
+        @apply w-full h-0.5 my-4 bg-gray-800;
+    }
+    p {
+        @apply text-gray-500 mb-4;
+        font-size: .85rem;
+        @screen sm {
+            @apply text-sm;
+        }
+    }
+
+    .comments_section {
+       
+
+        .comments_block {
+            @apply overflow-y-scroll pb-2 h-20 transition-all duration-200;
+           
+            max-height: 27rem;
+            word-wrap: break-word;
+            scrollbar-width: 0;
+            
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            @screen md { 
+                height: 17rem;
+                max-height: 17rem;               
+            }
+        }
+
+    }
+    
+
+    .commentItem {
+        @apply mt-7;
+
+        >div > div > {
+            
+            div {
+                &:first-child {
+                    @apply opacity-60;
+                    font-size: .75rem;
+                    @screen sm {
+                        font-size: .85rem;
+                    }
+                    
+                  
+                }
+
+                &:last-child {
+                    @apply text-white opacity-100;
+                    word-wrap:break-word;
+                    max-width: 10rem;
+                    font-size: .9rem;
+                    @screen sm {
+                        @apply text-sm;
+                    }
+                   
+                }
+            }
+        }
+    }
+    
+
+    .bottomForm {  
+        @apply bg-gray-900 w-full mt-3;      
+        
+
+        .wrapper {
+            @apply relative flex bg-gray-900 rounded-lg justify-between shadow-md transition-all duration-150 hover:shadow ;
+
+            >div >input {
+                @apply bg-gray-900;
+                box-shadow: none;
+            }
+        }
+
+        @screen md {
+            @apply absolute bottom-1 mt-0;
+            width: calc(100% - 2.5rem)
+        }
+       
+    }
+}

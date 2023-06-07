@@ -1,0 +1,25 @@
+.main {
+    @apply flex flex-wrap relative;
+    .content {
+        @apply relative;
+        width: 100%;
+
+        .wrapper {
+            @apply px-3 pb-3;
+        }
+    }
+    @screen md {
+        .content {        
+            width: 77%;
+            
+            .wrapper {
+                @apply pl-6 pr-8
+            }
+    
+            
+        }
+
+    }
+    
+    
+}

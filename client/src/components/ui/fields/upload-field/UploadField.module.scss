@@ -1,0 +1,43 @@
+
+.file {
+    @apply m-auto;
+
+    >h2 {
+        @apply text-sm font-semibold mb-2 text-gray-500;
+    }
+
+    >label {
+        @apply block;
+
+        >input {
+            @apply cursor-pointer inline-block text-gray-500;
+            font-size: .85rem;
+            @screen sm {
+                @apply text-sm;
+            }
+
+            &::file-selector-button {
+                @apply border-0 mr-2 px-2 py-1 bg-opacity-80 bg-purple rounded-full text-white;
+                font-size: .75rem; 
+                
+                @media (hover: hover) {
+                    @apply cursor-pointer hover:bg-opacity-100;
+                }
+                
+                @screen sm {
+                    @apply text-sm px-4 py-2;
+                }
+            }
+            
+            /* max-width: 10rem; */
+            
+            
+
+            @screen md {
+                max-width: fit-content;
+         
+            }
+        }
+    }
+
+}

@@ -1,0 +1,3 @@
+- ${file(serverless-resources/s3-bucket.yml)}
+- ${file(serverless-resources/cognito-user-user-pool.yml)}
+- ${file(serverless-resources/cognito-user-user-pool-client.yml)}

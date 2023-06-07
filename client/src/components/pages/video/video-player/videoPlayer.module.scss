@@ -1,0 +1,142 @@
+.wrapper {
+  @apply rounded-none overflow-hidden h-full fixed w-full;
+  left: -.05rem;
+  background-color: black;
+  height: 15rem;
+  z-index: 20;
+
+  @screen sm {
+    height: 20rem;
+  }
+  @screen xl {
+    height: 30rem;
+  }
+
+  @screen md {
+    @apply rounded-3xl relative shadow;
+  }
+
+  .player {
+    @apply relative w-full h-full;
+    z-index: 1;
+  }
+
+  .controls {
+    @apply left-5 bottom-5 absolute flex items-center justify-between rounded-lg bg-gray-900 bg-opacity-80 opacity-100 transition-all duration-300;
+    padding: .25rem .15rem .25rem .15rem;
+    width: calc(100% - 2.5rem);
+    z-index: 2;
+
+
+    .button {
+      @apply mx-1 flex justify-center items-center text-purple text-opacity-80 transition-colors hover:text-opacity-100;
+      font-size: 1rem;
+
+      @screen sm {
+        @apply mx-1.5 text-base
+      }
+    }
+
+
+    .timeControls {
+      @apply flex items-center text-white opacity-60 mx-1;
+      font-size: .75rem;
+
+      @screen sm {
+        font-size: 1rem;
+      }
+    }
+
+    >p:nth-child(2) {
+      @apply mx-2;
+    }
+
+    .progressWrapper {
+      @apply h-1.5 bg-gray-700 rounded bg-opacity-50 relative cursor-pointer;
+      width: 65%;
+
+
+      .progressBar {
+        @apply absolute top-0 left-0 bg-gray-500 h-full z-20;
+      }
+
+      .previewBar {
+        @apply absolute top-0 left-0 bg-gray-700 h-full z-10;
+      }
+      .thumb {
+        @apply rounded-full absolute left-0 bg-primary opacity-0;
+        height: calc(100% + .15rem);
+        top: -1px;
+        width: .5rem;
+        z-index: 21;
+      }
+      &:hover > .thumb {
+        @apply opacity-80;
+      }
+    }
+
+    .volume_container {
+      @apply relative;
+
+      .volume_slider {
+        @apply appearance-none outline-none absolute bg-gray-600 -rotate-90 opacity-0 transition-opacity duration-300;
+        display: none;
+        width: 4rem;
+        height: .3rem;
+        top: calc(-100% - 1.15rem);
+        left: calc(-50% + .15rem);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgb(108, 94, 207,1), rgb(108 ,94, 207,1));
+      }
+      .volume_slider::-webkit-slider-runnable-track {
+        @apply appearance-none outline-none border-none bg-transparent
+      }
+      .volume_slider::-webkit-slider-thumb {
+        @apply appearance-none outline-none rounded-full bg-purple opacity-100 cursor-pointer;
+        -webkit-appearance: none;
+        width: .9rem;
+        height: .9rem;
+
+      }
+
+      .volume_slider::-moz-range-thumb {
+        @apply appearance-none outline-none rounded-full bg-purple opacity-100 cursor-pointer;
+        -webkit-appearance: none;
+        width: .9rem;
+        height: .9rem;
+      }
+
+      .volume_slider::-ms-range-thumb {
+        @apply appearance-none outline-none rounded-full bg-purple opacity-100 cursor-pointer;
+        -webkit-appearance: none;
+        width: .9rem;
+        height: .9rem;
+      }
+
+      @screen md {
+        .volume_slider {
+          @apply block;
+        }
+      }
+
+    }
+
+    .volume_container:hover > .volume_slider {
+      @apply opacity-100;
+    }
+
+    .scrubbing {
+      @apply h-2.5;
+    }
+  }
+
+  .controls_active {
+    @apply opacity-100;
+  }
+
+  .controls_disabled {
+    @apply opacity-0;
+  }
+
+}

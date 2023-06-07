@@ -1,0 +1,59 @@
+.wrapper {
+    @apply relative inline-flex;
+
+    >button {
+        @apply flex items-center justify-center gap-2 outline-none;
+        >div {
+            @apply overflow-hidden rounded-full;
+            >img {
+                @apply w-8 h-8;
+                @screen sm {
+                    @apply w-10 h-10;
+                }
+            }
+        }
+
+        >span {
+            @apply text-sm;
+            font-weight: 500;
+            color: #e2c9e2aa;
+        }
+
+        .icon {
+            @apply text-gray-500;
+            font-size: 1.2rem;
+        }
+
+    }
+    .menu {
+        @apply absolute left-0 w-full p-3 rounded-lg z-50 shadow bg-gray-800 min-w-max animate-fadeIn duration-150;
+        top: calc(100% + 1.4rem);
+        left: calc(-30% - 1rem);
+        
+        >ul {
+            @apply flex-col flex gap-2;
+            >li {
+                @apply text-white  opacity-75 relative;
+                font-size: .85rem;
+
+                &:hover::before {
+                    @apply w-full
+                }
+                &::before {
+                    @apply absolute bottom-0 left-0 w-0 h-1 bg-primary transition-all duration-200;
+                    content: '';
+                    
+                }
+            }
+            @screen sm {
+                @apply gap-4;
+                >li {
+                    @apply text-sm;
+                }
+            }
+        }
+        @screen md {
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+
+.wrapper {
+    @apply py-3 mx-auto;
+
+    @screen md {
+        @apply py-2 ml-5
+    }
+    
+    .img_container {
+        @apply rounded-xl shadow-md p-2 bg-gray-800 overflow-hidden;
+        height: 10rem;
+       
+       >img {
+            @apply w-full h-full;
+            object-fit: scale-down;
+       }
+    }
+    
+    .error {
+        @apply mt-1 ml-1 text-primary;
+        font-size: .8rem;
+    }
+}

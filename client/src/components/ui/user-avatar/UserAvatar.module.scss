@@ -1,0 +1,35 @@
+
+.avatar_wrapper {
+    @apply relative;
+    width: max-content;
+
+    .avatar {
+        @apply rounded-full overflow-hidden;
+        padding: .15rem;
+        border: .1rem solid rgb(107 107 123);
+    
+    
+        >img {
+            @apply rounded-full h-8 w-8 overflow-hidden;
+            @screen sm {
+                @apply h-10 w-10;
+            }
+        }
+    }
+    
+    .avatar_check {
+        @apply absolute bottom-0 right-1;
+    }
+    
+}
+
+.checkmark {
+    @apply rounded-full bg-gray-600 flex items-center justify-center w-3 h-3;
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #FF7652, 0 0 8px #FF7652, 0 0 10px #FF7652;
+
+    >svg {
+        @apply w-full h-full text-white opacity-90;
+
+    }
+
+}

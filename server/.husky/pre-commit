@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+export PATH=./node_modules/.bin:/usr/local/bin:$PATH
+cd server && lint-staged

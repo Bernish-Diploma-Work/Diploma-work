@@ -1,0 +1,45 @@
+
+.container {
+    @apply relative;
+    z-index: 151;
+
+    .wrapper {
+        @apply fixed inset-0 flex items-center justify-center p-4;
+
+        .panel_wrapper {
+            @apply w-full max-w-sm bg-gray-900 px-5 py-3 rounded-lg shadow animate-fadeIn;
+            animation-duration: .2s;
+
+            .panel_title {
+                @apply text-center text-purple text-opacity-70 my-2;
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+
+            .panel_msg {
+                @apply text-sm text-center text-gray-300 text-opacity-70 my-5;
+            }
+
+            .panel_buttons {
+                @apply flex justify-between items-center;
+
+                >button {
+                    @apply bg-purple p-2 rounded-lg bg-opacity-70 text-white transition-colors;
+                    font-size: .85rem;
+
+                    @media (hover: hover) {
+                        &:hover {
+                            @apply bg-opacity-100
+                        }
+                    }
+
+                    @screen sm {
+                        @apply text-sm;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
